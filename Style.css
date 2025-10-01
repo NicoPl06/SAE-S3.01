@@ -85,18 +85,20 @@ body {
 
 .main-nav {
     background-color: #a5a5a5;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin: 0;
 }
 
 .main-nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 0;
+    padding: 0;
 }
 
 .main-nav li {
     border-right: 1px solid black;
+    text-align: center; /* centrer le texte/lien */
 }
 
 .main-nav li:first-child {
@@ -116,9 +118,10 @@ body {
     background-color: #8c8c8c;
 }
 
+
 /* Petite flèche ▼ */
 .arrow {
-    font-size: 0.7em;
+    font-size: 0.9em;
     margin-left: 5px;
     color: #006b6b;
 }
