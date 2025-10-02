@@ -20,5 +20,26 @@ body {
 .banner-img {
     width : 100%;
     display: block;
-    max-height: 300px; /* fixe la hauteur visible */
+    max-height: 320px;
+}
+
+.custom-title {
+    color: #4c8c8c;
+}
+
+.custom-title::after {
+    content: "";
+    display: block;
+    width: 27.5%;
+    height: 3px;
+    background-color: #4c8c8c;
+    margin-top: 5px;
+}
+
+.custom-hr {
+    border: none;
+    height: 5px;
+    border-top: 5px solid #4c8c8c;
+    width: 80%;
+    margin: 50px auto;
 }
