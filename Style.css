@@ -43,3 +43,87 @@ body {
     width: 80%;
     margin: 50px auto;
 }
+.carousel-container {
+    position: relative; /* parent pour position absolue des flèches */
+    border: 5px solid #4c8c8c;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.carousel-slide {
+    display: flex;
+    height: 450px; /* hauteur fixe */
+}
+
+.carousel-image {
+    flex: 0 0 45%; /* 45% pour l'image */
+    margin-left: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px 0 0 25px;
+}
+
+/* Overlay très léger pour contraste */
+.carousel-image::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.05); /* contraste très léger */
+}
+
+.carousel-text {
+    flex: 0 0 55%; /* 55% texte */
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.custom-arrow {
+    position: absolute;
+    bottom: 10px;   /* distance du bas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+
+    top: auto !important;   /* annule position par défaut Bootstrap */
+    left: auto !important;  /* annule position par défaut */
+}
+
+.custom-arrow.carousel-control-prev {
+    right: 60px; /* place la flèche gauche à côté de la droite */
+}
+
+.custom-arrow.carousel-control-next {
+    right: 10px; /* flèche droite */
+}
+
+.custom-arrow .carousel-control-prev-icon,
+.custom-arrow .carousel-control-next-icon {
+    width: 35px;
+    height: 35px;
+    filter: invert(1); /* icônes noires */
+}
+
+
+
+
+
+
+
+
+
