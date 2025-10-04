@@ -44,7 +44,7 @@ body {
     margin: 50px auto;
 }
 .carousel-container {
-    position: relative; /* parent pour position absolue des flèches */
+    position: relative;
     border: 5px solid #4c8c8c;
     border-radius: 30px;
     overflow: hidden;
@@ -53,11 +53,11 @@ body {
 
 .carousel-slide {
     display: flex;
-    height: 450px; /* hauteur fixe */
+    height: 450px;
 }
 
 .carousel-image {
-    flex: 0 0 45%; /* 45% pour l'image */
+    flex: 0 0 45%;
     margin-left: 5px;
     overflow: hidden;
     position: relative;
@@ -70,16 +70,16 @@ body {
     border-radius: 25px 0 0 25px;
 }
 
-/* Overlay très léger pour contraste */
+
 .carousel-image::after {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.05); /* contraste très léger */
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .carousel-text {
-    flex: 0 0 55%; /* 55% texte */
+    flex: 0 0 55%;
     background-color: rgba(255, 255, 255, 0.95);
     display: flex;
     flex-direction: column;
@@ -89,7 +89,7 @@ body {
 
 .custom-arrow {
     position: absolute;
-    bottom: 10px;   /* distance du bas */
+    bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,7 +116,7 @@ body {
 .custom-arrow .carousel-control-next-icon {
     width: 35px;
     height: 35px;
-    filter: invert(1); /* icônes noires */
+    filter: invert(1);
 }
 
 .custom-btn {
@@ -131,6 +131,104 @@ body {
 .custom-btn:hover {
     background-color: #3b7272;
     transform: scale(1.05);
+}
+
+
+
+.shop {
+    background-color: #ffffff;
+}
+
+.shop-btn {
+    background-color: #4c8c8c;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+    background-color: #3b7272;
+    transform: scale(1.05);
+}
+
+.shop-dates {
+    font-size: 0.95em;
+    color: #333;
+}
+
+
+.footer {
+    background-color: #4c8c8c;
+    color: #000000;
+    position: relative;
+    min-height: 150px;
+    padding: 20px 0;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid #000000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.triangle:hover {
+    transform: translateY(-3px);
+}
+
+/* Footer bottom : blocs aux coins */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    position: relative; /* important pour le positionnement */
+}
+
+/* Bloc gauche et droit */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative; /* important pour les boutons */
+}
+
+/* Boutons logo associations */
+.asso-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.asso-btn img {
+    width: 50px;
+    height: auto;
+    display: block;
+}
+
+.asso-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+
+.members-logos {
+    display: flex;
+    gap: 10px;
 }
 
 
