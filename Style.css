@@ -119,6 +119,21 @@ body {
     filter: invert(1); /* icônes noires */
 }
 
+.custom-btn {
+    background-color: #4c8c8c;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #3b7272;
+    transform: scale(1.05);
+}
+
+
 
 
 
