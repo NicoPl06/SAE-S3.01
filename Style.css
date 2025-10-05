@@ -232,6 +232,63 @@ body {
 }
 
 
+/* ======== Sous-menus déroulants gris ======== */
+.custom-dropdown {
+    background-color: #6c757d; /* gris identique à bg-secondary */
+    border: none;
+    border-radius: 0 0 10px 10px;
+    padding: 0;
+    margin-top: 0;
+    animation: dropdownFade 0.25s ease;
+    min-width: 200px;
+}
+
+.custom-dropdown .dropdown-item {
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+.custom-dropdown .dropdown-item:hover {
+    background-color: #5a6268; /* gris plus foncé */
+    color: #fff;
+}
+
+/* Animation d’apparition douce */
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Supprime la flèche Bootstrap */
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* Harmonisation de la hauteur et centrage */
+.nav-link {
+    padding: 12px 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Optionnel : effet au survol sur les onglets principaux */
+.nav-link:hover {
+    background-color: #5a6268;
+    color: white !important;
+    border-radius: 5px;
+    transition: 0.2s ease;
+}
+
+
+
+
 
 
 
