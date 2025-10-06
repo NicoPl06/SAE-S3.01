@@ -8,8 +8,72 @@
     <!-- Ton style perso -->
     <link rel="stylesheet" href="Style.css">
 </head>
-<body id="Haut de page">
 
+<!-- Bannière cookies RGPD -->
+<div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+        <h5>Gestion des cookies</h5>
+        <p>
+            Nous utilisons des cookies pour améliorer votre expérience, mesurer l’audience et proposer des contenus personnalisés.
+            Vous pouvez accepter, refuser ou personnaliser vos choix.
+        </p>
+        <div class="cookie-buttons">
+            <a href="#fermer" class="cookie-btn accept">Accepter tout</a>
+            <a href="#fermer" class="cookie-btn refuse">Refuser tout</a>
+            <a href="#cookie-settings" class="cookie-btn settings">Paramétrer</a>
+        </div>
+    </div>
+</div>
+
+<!-- Fenêtre de paramétrage des cookies -->
+<div id="cookie-settings" class="cookie-modal">
+    <div class="cookie-modal-content">
+        <h4>Préférences des cookies</h4>
+        <p class="small">Personnalisez vos préférences ci-dessous.</p>
+
+        <form>
+            <div class="cookie-option">
+                <label>
+                    <input type="checkbox" checked disabled>
+                    <strong>Cookies essentiels</strong> (nécessaires au bon fonctionnement du site)
+                </label>
+            </div>
+
+            <div class="cookie-option">
+                <label>
+                    <input type="checkbox">
+                    Cookies analytiques (mesure d’audience)
+                </label>
+            </div>
+
+            <div class="cookie-option">
+                <label>
+                    <input type="checkbox">
+                    Cookies publicitaires (contenus personnalisés)
+                </label>
+            </div>
+
+            <div class="cookie-option">
+                <label>
+                    <input type="checkbox">
+                    Cookies de réseaux sociaux (partage et intégrations)
+                </label>
+            </div>
+
+            <div class="cookie-modal-buttons">
+                <a href="#fermer" class="cookie-btn refuse">Fermer</a>
+                <a href="#fermer" class="cookie-btn settings">Enregistrer mes choix</a>
+            </div>
+        </form>
+
+        <a href="#fermer" class="cookie-close">&times;</a>
+    </div>
+</div>
+
+<!-- Lien factice pour fermer tout -->
+<div id="fermer"></div>
+
+<body id="Haut de page">
 <header>
 
     <!-- Barre du haut -->
@@ -274,9 +338,9 @@
         <div class="footer-bottom d-flex justify-content-between px-4">
             <!-- Bloc gauche -->
             <div class="footer-left d-flex flex-column align-items-start">
-                <button class="btn bg-light rounded-circle d-flex align-items-center justify-content-center p-2 mb-2">
+                <a href="#cookie-banner" class="btn bg-light rounded-circle d-flex align-items-center justify-content-center p-2 mb-2">
                     <img src="images/Cookie.png" alt="Cookies" style="width: 35px; height: 35px;">
-                </button>
+                </a>
                 <p class="small mb-0">COPYRIGHT / CREDITS / MENTIONS LÉGALES</p>
             </div>
 
