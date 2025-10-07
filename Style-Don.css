@@ -1,13 +1,12 @@
+/* Style-Don.css */
 body {
     font-family: Arial, sans-serif;
 }
-
 
 .heart {
     margin-right: 8px;
     font-size: 1.2em;
     position: relative;
-
 }
 
 .user-icon {
@@ -16,7 +15,6 @@ body {
     background: white;
     padding: 5px;
 }
-
 
 /* ======== Sous-menus déroulants gris ======== */
 .custom-dropdown {
@@ -40,7 +38,7 @@ body {
     color: #fff;
 }
 
-/* Animation d’apparition douce */
+/* Animation d'apparition douce */
 @keyframes dropdownFade {
     from {
         opacity: 0;
@@ -72,14 +70,97 @@ body {
     transition: 0.2s ease;
 }
 
+/* Bannière avec formulaire de don */
+.banniere {
+    position: relative;
+    overflow: hidden;
+}
 
 .banner-img {
-    box-sizing: border-box;
-    position: relative;
     height: 500px;
-    opacity: 0.99;
-    border: 1px solid #FFFFFF;
+    object-fit: cover;
     filter: blur(6px);
+}
+
+/* Conteneur du formulaire de don */
+.don-form-container {
+    max-width: 400px;
+    margin-left: 50px;
+    opacity: 0.95;
+}
+
+/* Boutons avec la nouvelle couleur #4c8c8c */
+.btn-outline-custom {
+    color: #4c8c8c;
+    border-color: #4c8c8c;
+}
+
+.btn-outline-custom:hover {
+    background-color: #4c8c8c;
+    border-color: #4c8c8c;
+    color: white;
+}
+
+.btn-custom {
+    background-color: #4c8c8c;
+    border-color: #4c8c8c;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #3a6e6e;
+    border-color: #3a6e6e;
+    color: white;
+}
+
+.text-primary {
+    color: #4c8c8c !important;
+}
+
+/* Boutons de montant avec sélection CSS */
+.montant-label {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Style quand le radio button est sélectionné */
+input[type="radio"]:checked + .montant-label {
+    background-color: #4c8c8c !important;
+    border-color: #4c8c8c !important;
+    color: white !important;
+    transform: scale(1.02);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Style pour le montant libre quand sélectionné */
+#montantLibreRadio:checked ~ .input-group {
+    border: 2px solid #4c8c8c;
+    border-radius: 0.375rem;
+    padding: 2px;
+}
+
+#montantLibreRadio:checked ~ .input-group .form-control {
+    border-color: transparent;
+}
+
+#montantLibreRadio:checked ~ .input-group .input-group-text {
+    background-color: #4c8c8c;
+    color: white;
+    border-color: #4c8c8c;
+}
+
+/* Effet au survol */
+.montant-label:hover {
+    background-color: #4c8c8c !important;
+    border-color: #4c8c8c !important;
+    color: white !important;
+}
+
+/* Zone de texte à droite */
+.don-text-container {
+    max-width: 500px;
+    margin-right: 50px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
 .custom-hr {
@@ -167,7 +248,6 @@ p, li {
     background-color: rgba(255, 255, 255, 0.3);
     transform: scale(1.1);
 }
-
 
 .members-logos {
     display: flex;
@@ -301,7 +381,7 @@ p, li {
     animation: slideDown 0.4s ease;
 }
 
-/* Animation d’apparition */
+/* Animation d'apparition */
 @keyframes slideDown {
     from { transform: translateY(-30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
@@ -333,4 +413,18 @@ p, li {
 }
 .cookie-close:hover {
     color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .don-form-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .don-text-container {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
 }
