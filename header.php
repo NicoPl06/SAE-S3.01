@@ -5,14 +5,8 @@
     <title>FAGE</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Ton style perso -->
-    <link rel="stylesheet" href="Styles/Style.css">
-    <!-- Référence JS -->
-    <script src="js/Accueil.js"></script>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/Accueil/Logo.png">
-
 </head>
+<body id="Haut de page">
 <header>
 
     <!-- Barre du haut -->
@@ -20,22 +14,24 @@
         <div class="container-fluid align-items-center">
 
             <!-- Logo -->
-            <a class="navbar-brand" href="Accueil.html">
+            <a class="navbar-brand" href="Accueil.php">
                 <img src="images/Accueil/Logo.png" alt="FAGE" height="75">
             </a>
 
             <!-- Bouton Don -->
-            <a class="btn btn-outline-dark rounded-pill me-3 fw-bold" href="Don.html" role="button">
+            <a class="btn btn-outline-dark rounded-pill me-3 fw-bold" href="Don.php" role="button">
                 <span class="heart">💙</span> FAIRE UN DON
             </a>
 
             <!-- Recherche -->
             <form class="d-flex ms-auto me-3">
-                <input class="form-control me-2" type="search" placeholder="Recherche">
+                <label>
+                    <input class="form-control me-2" type="search" placeholder="Recherche">
+                </label>
                 <button class="btn btn-info">OK</button>
             </form>
 
-            <!-- Icône utilisateur -->
+            <!-- Icône Bouton utilisateur -->
             <button class="btn p-0 border-0 bg-transparent user-btn">
                 <img src="images/Accueil/user.png" alt="Profil" class="rounded-circle user-icon">
             </button>
@@ -141,13 +137,6 @@
             </li>
         </ul>
     </nav>
-
-    <!-- Bannière -->
-    <section class="banniere">
-        <img src="images/Accueil/Banniere.png" alt="Bannière FAGE" class="img-fluid w-100 banner-img">
-    </section>
 </header>
+</body>
 
-
-
-<?php

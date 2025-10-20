@@ -1,3 +1,71 @@
+<!-- Bannière cookies RGPD -->
+<div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+        <h5>Gestion des cookies</h5>
+        <p>
+            Nous utilisons des cookies pour améliorer votre expérience, mesurer l’audience et proposer des contenus personnalisés.
+            Vous pouvez accepter, refuser ou personnaliser vos choix.
+        </p>
+        <div class="cookie-buttons">
+            <a href="#fermer" class="cookie-btn accept">Accepter tout</a>
+            <a href="#fermer" class="cookie-btn refuse">Refuser tout</a>
+            <a href="#cookie-settings" class="cookie-btn settings">Paramétrer</a>
+        </div>
+    </div>
+</div>
+
+<!-- Fenêtre de paramétrage des cookies -->
+<div id="cookie-settings" class="cookie-modal">
+    <div class="cookie-modal-content">
+        <h4>Préférences des cookies</h4>
+        <p class="small">Personnalisez vos préférences ci-dessous.</p>
+
+        <form>
+            <div class="cookie-option">
+                <label>
+                    <input type="checkbox" checked disabled>
+                    <strong>Cookies essentiels</strong> (nécessaires au bon fonctionnement du site)
+                </label>
+            </div>
+
+            <div class="cookie-option">
+                <label>
+                    <input type="checkbox">
+                    Cookies analytiques (mesure d’audience)
+                </label>
+            </div>
+
+            <div class="cookie-option">
+                <label>
+                    <input type="checkbox">
+                    Cookies publicitaires (contenus personnalisés)
+                </label>
+            </div>
+
+            <div class="cookie-option">
+                <label>
+                    <input type="checkbox">
+                    Cookies de réseaux sociaux (partage et intégrations)
+                </label>
+            </div>
+
+            <div class="cookie-modal-buttons">
+                <a href="#fermer" class="cookie-btn refuse">Fermer</a>
+                <a href="#fermer" class="cookie-btn settings">Enregistrer mes choix</a>
+            </div>
+        </form>
+
+        <a href="#fermer" class="cookie-close">&times;</a>
+    </div>
+</div>
+<!-- Lien factice pour fermer tout -->
+<div id="fermer"></div>
+
+<!-- Bouton Retour en haut -->
+<a href="#Haut de page" class="back-to-top" aria-label="Retour en haut de la page">
+    ↑
+</a>
+
 <!-- Footer -->
 <footer class="footer text-white">
     <div class="footer-bottom d-flex justify-content-between px-4">
@@ -26,4 +94,8 @@
         </div>
     </div>
 </footer>
-<?php
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
