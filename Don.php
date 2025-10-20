@@ -20,13 +20,13 @@ require_once 'header.php';
 
                     <!-- Choix du type de don -->
                     <div class="mb-4">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="donType" id="donOnce" checked>
-                            <label class="form-check-label fw-bold" for="donOnce">Je donne une fois</label>
+                        <div class="form-check form-check">
+                            <input class="d-none" type="radio" name="donType" id="donOnce" checked>
+                            <label class="btn btn-outline-custom w-100 py-2 montant-label" for="donOnce">Je donne une fois</label>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="donType" id="donMonthly">
-                            <label class="form-check-label fw-bold" for="donMonthly">Je donne tous les mois</label>
+                        <div class="form-check form-check">
+                            <input class="d-none" type="radio" name="donType" id="donMonthly">
+                            <label class="btn btn-outline-custom w-100 py-2 montant-label" for="donMonthly">Je donne tous les mois</label>
                         </div>
                     </div>
 
