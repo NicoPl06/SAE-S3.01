@@ -4,7 +4,7 @@ require_once 'header.php';
 
 
 <link rel="stylesheet" href="Styles/Style-Don.css">
-<script src="js/Don.js"></script>
+<script src="js/Retour_haut.js"></script>
 
 <!-- Bannière avec formulaire de don -->
 <section class="banniere position-relative">

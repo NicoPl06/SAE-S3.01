@@ -4,7 +4,7 @@
 ?>
 
 <link rel="stylesheet" href="Styles/Style-Accueil.css">
-<script src="js/Accueil.js"></script>
+<script src="js/Retour_haut.js"></script>
 
 <!-- Bannière -->
 <section class="banniere">

@@ -5,6 +5,8 @@
     <title>FAGE</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/Accueil/Logo.png">
 </head>
 <body id="Haut de page">
 <header>
