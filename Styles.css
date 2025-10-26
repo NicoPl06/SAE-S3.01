@@ -1,4 +1,6 @@
-/* Style-Don.css */
+/* ===================== */
+/* ====== GLOBAL ======= */
+/* ===================== */
 body {
     font-family: Arial, sans-serif;
 }
@@ -16,7 +18,10 @@ body {
     padding: 5px;
 }
 
-/* ======== Sous-menus déroulants gris ======== */
+/* ===================== */
+/* ====== HEADER ======= */
+/* ===================== */
+/* Sous-menus déroulants gris */
 .custom-dropdown {
     background-color: #6c757d; /* gris identique à bg-secondary */
     border: none;
@@ -38,31 +43,21 @@ body {
     color: #fff;
 }
 
-/* Animation d'apparition douce */
 @keyframes dropdownFade {
-    from {
-        opacity: 0;
-        transform: translateY(-8px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Supprime la flèche Bootstrap */
 .dropdown-toggle::after {
     display: none;
 }
 
-/* Harmonisation de la hauteur et centrage */
 .nav-link {
     padding: 12px 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-/* Optionnel : effet au survol sur les onglets principaux */
 .nav-link:hover {
     background-color: #5a6268;
     color: white !important;
@@ -70,26 +65,154 @@ body {
     transition: 0.2s ease;
 }
 
-/* Bannière avec formulaire de don */
+/* ===================== */
+/* ====== BANNIERES ===== */
+/* ===================== */
+.banner-img {
+    width: 100%;
+    display: block;
+}
+
 .banniere {
     position: relative;
     overflow: hidden;
 }
 
-.banner-img {
+/* Accueil : bannière normale */
+.carousel-container .banner-img {
+    max-height: 320px;
+}
+
+/* Don : flou */
+.banniere .banner-img {
     height: 500px;
     object-fit: cover;
     filter: blur(6px);
 }
 
-/* Conteneur du formulaire de don */
-.don-form-container {
-    max-width: 400px;
-    margin-left: 50px;
-    opacity: 0.95;
+/* ===================== */
+/* ====== TITRES ======= */
+/* ===================== */
+.custom-title {
+    color: #4c8c8c;
 }
 
-/* Boutons avec la nouvelle couleur #4c8c8c */
+.custom-title::after {
+    content: "";
+    display: block;
+    width: 27.5%;
+    height: 3px;
+    background-color: #4c8c8c;
+    margin-top: 5px;
+}
+
+.custom-hr {
+    border: none;
+    height: 5px;
+    border-top: 5px solid #4c8c8c;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.text-primary {
+    color: #4c8c8c !important;
+}
+
+/* ===================== */
+/* ====== CAROUSEL ====== */
+/* ===================== */
+.carousel-container {
+    position: relative;
+    border: 5px solid #4c8c8c;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.carousel-slide {
+    display: flex;
+    height: 450px;
+}
+
+.carousel-image {
+    flex: 0 0 45%;
+    margin-left: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px 0 0 25px;
+}
+
+.carousel-text {
+    flex: 0 0 55%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.custom-arrow {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    top: auto !important;
+    left: auto !important;
+}
+
+.custom-arrow.carousel-control-prev {
+    right: 60px;
+}
+
+.custom-arrow.carousel-control-next {
+    right: 10px;
+}
+
+.custom-arrow .carousel-control-prev-icon,
+.custom-arrow .carousel-control-next-icon {
+    width: 35px;
+    height: 35px;
+    filter: invert(1);
+}
+
+/* ===================== */
+/* ====== BOUTONS ====== */
+/* ===================== */
+.custom-btn, .shop-btn, .btn-custom {
+    background-color: #4c8c8c;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover, .shop-btn:hover, .btn-custom:hover {
+    background-color: #3b7272;
+    transform: scale(1.05);
+}
+
+.shop-btn {
+    border: none;
+}
+
+.shop-dates {
+    font-size: 0.95em;
+    color: #333;
+}
+
+/* Don : boutons radio custom */
 .btn-outline-custom {
     color: #4c8c8c;
     border-color: #4c8c8c;
@@ -101,37 +224,17 @@ body {
     color: white;
 }
 
-.btn-custom {
-    background-color: #4c8c8c;
-    border-color: #4c8c8c;
-    color: white;
-}
-
-.btn-custom:hover {
-    background-color: #3a6e6e;
-    border-color: #3a6e6e;
-    color: white;
-}
-
-.text-primary {
-    color: #4c8c8c !important;
-}
-
-/* Boutons de montant avec sélection CSS */
 .montant-label {
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-/* Animation des boutons de montant au clic */
 .montant-label.clicked {
     transform: scale(1.08);
     box-shadow: 0 0 10px rgba(76,140,140,0.5);
     transition: all 0.2s ease;
 }
 
-
-/* Style quand le radio button est sélectionné */
 input[type="radio"]:checked + .montant-label {
     background-color: #4c8c8c !important;
     border-color: #4c8c8c !important;
@@ -140,7 +243,6 @@ input[type="radio"]:checked + .montant-label {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Style pour le montant libre quand sélectionné */
 #montantLibreRadio:checked ~ .input-group {
     border: 2px solid #4c8c8c;
     border-radius: 0.375rem;
@@ -157,28 +259,32 @@ input[type="radio"]:checked + .montant-label {
     border-color: #4c8c8c;
 }
 
-/* Effet au survol */
 .montant-label:hover {
     background-color: #4c8c8c !important;
     border-color: #4c8c8c !important;
     color: white !important;
 }
 
-/* Zone de texte à droite */
+/* ===================== */
+/* ====== SHOP ======== */
+.shop {
+    background-color: #ffffff;
+}
+
+.don-form-container {
+    max-width: 400px;
+    margin-left: 50px;
+    opacity: 0.95;
+}
+
 .don-text-container {
     max-width: 500px;
     margin-right: 50px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
-.custom-hr {
-    border: none;
-    height: 5px;
-    border-top: 5px solid #4c8c8c;
-    width: 80%;
-    margin: 50px auto;
-}
-
+/* ===================== */
+/* ====== LISTES ======= */
 ul li {
     margin-bottom: 10px;
     line-height: 1.6;
@@ -189,7 +295,8 @@ p, li {
     color: #212529;
 }
 
-/* RETOUR HAUT DE PAGE */
+/* ===================== */
+/* ====== RETOUR HAUT === */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -205,7 +312,7 @@ p, li {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     z-index: 1000;
     text-decoration: none;
@@ -223,21 +330,20 @@ p, li {
 .back-to-top:hover {
     background-color: #4c8c8c;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 .back-to-top:active {
     transform: translateY(-1px);
 }
 
-/* Cible pour le retour en haut */
 #top-of-page {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-/* Responsive pour le bouton */
+/* Responsive retour haut */
 @media (max-width: 768px) {
     .back-to-top {
         bottom: 20px;
@@ -246,9 +352,21 @@ p, li {
         height: 45px;
         font-size: 1.3rem;
     }
+
+    .don-form-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .don-text-container {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
 }
 
-
+/* ===================== */
+/* ====== FOOTER ======= */
 .footer {
     background-color: #4c8c8c;
     color: #000000;
@@ -257,17 +375,14 @@ p, li {
     padding: 20px 0;
 }
 
-
-/* Footer bottom : blocs aux coins */
 .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
-    position: relative; /* important pour le positionnement */
+    position: relative;
 }
 
-/* Bloc gauche et droit */
 .footer-left {
     display: flex;
     flex-direction: column;
@@ -278,10 +393,9 @@ p, li {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    position: relative; /* important pour les boutons */
+    position: relative;
 }
 
-/* Boutons logo associations */
 .asso-btn {
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.3);
@@ -305,18 +419,13 @@ p, li {
     transform: scale(1.1);
 }
 
-
 .members-logos {
     display: flex;
     gap: 10px;
 }
 
-
 /* ===================== */
-/* ====== COOKIES ====== */
-/* ===================== */
-
-/* Bannière RGPD (en bas, cachée par défaut) */
+/* ====== COOKIES ======= */
 .cookie-banner {
     position: fixed;
     bottom: 0;
@@ -334,24 +443,22 @@ p, li {
     z-index: 1500;
 }
 
-/* Quand la bannière est ciblée */
 #cookie-banner:target {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
 }
 
-/* Contenu */
 .cookie-content {
     max-width: 800px;
     margin: auto;
 }
+
 .cookie-content h5 {
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* Boutons bannière */
 .cookie-buttons {
     margin-top: 15px;
     display: flex;
@@ -372,6 +479,7 @@ p, li {
     background-color: #198754;
     color: white;
 }
+
 .cookie-btn.accept:hover {
     background-color: #157347;
 }
@@ -380,6 +488,7 @@ p, li {
     background-color: #dc3545;
     color: white;
 }
+
 .cookie-btn.refuse:hover {
     background-color: #b02a37;
 }
@@ -389,20 +498,15 @@ p, li {
     color: #4c8c8c;
     border: 2px solid #4c8c8c;
 }
+
 .cookie-btn.settings:hover {
     background-color: #e8f0f0;
 }
 
-/* Empêche le saut de page quand on ferme */
 #fermer {
     display: none;
 }
 
-/* ===================== */
-/* ====== MODALE ======= */
-/* ===================== */
-
-/* Fenêtre modale (cachée par défaut) */
 .cookie-modal {
     position: fixed;
     top: 0;
@@ -420,13 +524,11 @@ p, li {
     z-index: 2000;
 }
 
-/* Quand on clique sur Paramétrer */
 #cookie-settings:target {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* Contenu du formulaire */
 .cookie-modal-content {
     background-color: white;
     color: #212529;
@@ -439,19 +541,16 @@ p, li {
     animation: slideDown 0.4s ease;
 }
 
-/* Animation d'apparition */
 @keyframes slideDown {
     from { transform: translateY(-30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* Options du formulaire */
 .cookie-option {
     margin: 10px 0;
     text-align: left;
 }
 
-/* Boutons dans la modale */
 .cookie-modal-buttons {
     display: flex;
     justify-content: center;
@@ -459,7 +558,6 @@ p, li {
     margin-top: 20px;
 }
 
-/* Croix de fermeture */
 .cookie-close {
     position: absolute;
     top: 10px;
@@ -469,20 +567,7 @@ p, li {
     color: #888;
     transition: color 0.2s ease;
 }
+
 .cookie-close:hover {
     color: #000;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .don-form-container {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .don-text-container {
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-top: 20px;
-    }
 }

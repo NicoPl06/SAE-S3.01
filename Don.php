@@ -3,7 +3,7 @@ require_once 'header.php';
 ?>
 
 
-<link rel="stylesheet" href="Styles/Style-Don.css">
+<link rel="stylesheet" href="Styles.css">
 <script src="js/Retour_haut.js"></script>
 
 <!-- Bannière avec formulaire de don -->

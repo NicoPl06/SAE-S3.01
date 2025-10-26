@@ -3,7 +3,7 @@
 
 ?>
 
-<link rel="stylesheet" href="Styles/Style-Accueil.css">
+<link rel="stylesheet" href="Styles.css">
 <script src="js/Retour_haut.js"></script>
 
 <!-- Bannière -->
