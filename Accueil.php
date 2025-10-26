@@ -1,5 +1,5 @@
 <?php
-    require_once'header.php'
+    require_once'header.html'
 
 ?>
 
@@ -128,7 +128,7 @@
 </section>
 
 <?php
-require_once 'footer.php';
+require_once 'footer.html';
 
 ?>
 
