@@ -40,104 +40,102 @@
         </div>
     </nav>
 
-    <!-- Barre de navigation avec menus déroulants -->
-    <nav class="navbar navbar-expand bg-secondary">
-        <ul class="nav nav-fill w-100">
-            <!-- NOS IDÉES -->
-            <li class="nav-item dropdown">
-                <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                    NOS IDÉES
-                </a>
-                <ul class="dropdown-menu custom-dropdown">
-                    <li><a class="dropdown-item" href="#">Élections CNESER</a></li>
-                    <li><a class="dropdown-item" href="#">Enseignement supérieur</a></li>
-                    <li><a class="dropdown-item" href="#">Élection présidentielle 2022</a></li>
-                    <li><a class="dropdown-item" href="#">Social</a></li>
-                    <li><a class="dropdown-item" href="#">Jeunesse</a></li>
-                    <li><a class="dropdown-item" href="#">Transition Écologique</a></li>
-                </ul>
-            </li>
+    <!-- Barre de navigation responsive avec menu burger -->
+    <nav class="navbar navbar-expand-lg bg-secondary">
+        <div class="container-fluid justify-content-center">
 
-            <!-- INNOVATION SOCIALE -->
-            <li class="nav-item dropdown">
-                <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                    INNOVATION SOCIALE
-                </a>
-                <ul class="dropdown-menu custom-dropdown">
-                    <li><a class="dropdown-item" href="#">Prévention par les pairs</a></li>
-                    <li><a class="dropdown-item" href="#">Évènements responsables</a></li>
-                    <li><a class="dropdown-item" href="#">S'engager dans la lutte contre les précarités</a></li>
-                    <li><a class="dropdown-item" href="#">Action citoyenne</a></li>
-                    <li><a class="dropdown-item" href="#">Vivre en bonne santé</a></li>
-                    <li><a class="dropdown-item" href="#">Evoluer dans un environnement durable, inclusif et citoyen</a></li>
-                </ul>
-            </li>
+            <!-- bouton burger = toute la barre -->
+            <button class="navbar-toggler w-100" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon mx-auto"></span>
+            </button>
 
-            <!-- MES DROITS -->
-            <li class="nav-item dropdown">
-                <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                    MES DROITS
-                </a>
-                <ul class="dropdown-menu custom-dropdown">
-                    <li><a class="dropdown-item" href="#">La défense des droits</a></li>
-                    <li><a class="dropdown-item" href="#">Foire aux questions</a></li>
-                    <li><a class="dropdown-item" href="#">Contacts</a></li>
-                </ul>
-            </li>
+            <!-- Contenu du menu (pliable) -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav nav-fill w-100">
 
-            <!-- ÉVÈNEMENTS -->
-            <li class="nav-item dropdown">
-                <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                    ÉVÈNEMENTS
-                </a>
-                <ul class="dropdown-menu custom-dropdown">
-                    <li><a class="dropdown-item" href="#">Congrès national</a></li>
-                    <li><a class="dropdown-item" href="#">Les Assoliades</a></li>
-                    <li><a class="dropdown-item" href="#">Séminaire National</a></li>
-                    <li><a class="dropdown-item" href="#">Journées Nationales de l'Innovation Sociale</a></li>
-                    <li><a class="dropdown-item" href="#">États Généraux</a></li>
-                </ul>
-            </li>
+                    <!-- NOS IDÉES -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">NOS IDÉES</a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="#">Élections CNESER</a></li>
+                            <li><a class="dropdown-item" href="#">Enseignement supérieur</a></li>
+                            <li><a class="dropdown-item" href="#">Élection présidentielle 2022</a></li>
+                            <li><a class="dropdown-item" href="#">Social</a></li>
+                            <li><a class="dropdown-item" href="#">Jeunesse</a></li>
+                            <li><a class="dropdown-item" href="#">Transition Écologique</a></li>
+                        </ul>
+                    </li>
 
-            <!-- FORMATIONS -->
-            <li class="nav-item dropdown">
-                <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                    FORMATIONS
-                </a>
-                <ul class="dropdown-menu custom-dropdown">
-                    <li><a class="dropdown-item" href="#">La formation à la FAGE</a></li>
-                    <li><a class="dropdown-item" href="#">Le catalogue des formations</a></li>
-                    <li><a class="dropdown-item" href="#">Organiser un week-end de formation avec la FAGE</a></li>
-                    <li><a class="dropdown-item" href="#">Le Guide de l'élu</a></li>
-                    <li><a class="dropdown-item" href="#">GRABE</a></li>
-                    <li><a class="dropdown-item" href="#">Formation en Education Civique et Citoyenne avec la FAGE</a></li>
-                </ul>
-            </li>
+                    <!-- INNOVATION SOCIALE -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">INNOVATION SOCIALE</a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="#">Prévention par les pairs</a></li>
+                            <li><a class="dropdown-item" href="#">Évènements responsables</a></li>
+                            <li><a class="dropdown-item" href="#">S'engager contre les précarités</a></li>
+                            <li><a class="dropdown-item" href="#">Action citoyenne</a></li>
+                            <li><a class="dropdown-item" href="#">Vivre en bonne santé</a></li>
+                            <li><a class="dropdown-item" href="#">Environnement durable et inclusif</a></li>
+                        </ul>
+                    </li>
 
-            <!-- ACTUALITÉS -->
-            <li class="nav-item dropdown">
-                <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                    ACTUALITÉS
-                </a>
-                <ul class="dropdown-menu custom-dropdown">
-                    <li><a class="dropdown-item" href="#">Actualités de la FAGE et de ses Fédérations</a></li>
-                    <li><a class="dropdown-item" href="#">Le blog</a></li>
-                    <li><a class="dropdown-item" href="#">Multimédia</a></li>
-                </ul>
-            </li>
+                    <!-- MES DROITS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">MES DROITS</a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="#">La défense des droits</a></li>
+                            <li><a class="dropdown-item" href="#">FAQ</a></li>
+                            <li><a class="dropdown-item" href="#">Contacts</a></li>
+                        </ul>
+                    </li>
 
-            <!-- ESPACE PRESSE -->
-            <li class="nav-item dropdown">
-                <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                    ESPACE PRESSE
-                </a>
-                <ul class="dropdown-menu custom-dropdown">
-                    <li><a class="dropdown-item" href="#">CONTACT</a></li>
-                    <li><a class="dropdown-item" href="#">CDP & DP</a></li>
-                    <li><a class="dropdown-item" href="#">Revue de presse</a></li>
+                    <!-- ÉVÈNEMENTS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">ÉVÈNEMENTS</a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="#">Congrès national</a></li>
+                            <li><a class="dropdown-item" href="#">Les Assoliades</a></li>
+                            <li><a class="dropdown-item" href="#">Séminaire National</a></li>
+                            <li><a class="dropdown-item" href="#">Journées Nationales</a></li>
+                            <li><a class="dropdown-item" href="#">États Généraux</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- FORMATIONS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">FORMATIONS</a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="#">La formation à la FAGE</a></li>
+                            <li><a class="dropdown-item" href="#">Catalogue</a></li>
+                            <li><a class="dropdown-item" href="#">Organiser un week-end</a></li>
+                            <li><a class="dropdown-item" href="#">Guide de l'élu</a></li>
+                            <li><a class="dropdown-item" href="#">GRABE</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- ACTUALITÉS -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">ACTUALITÉS</a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="#">Actus FAGE & Fédérations</a></li>
+                            <li><a class="dropdown-item" href="#">Le blog</a></li>
+                            <li><a class="dropdown-item" href="#">Multimédia</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- ESPACE PRESSE -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-dark fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">ESPACE PRESSE</a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                            <li><a class="dropdown-item" href="#">CDP & DP</a></li>
+                            <li><a class="dropdown-item" href="#">Revue de presse</a></li>
+                        </ul>
+                    </li>
+
                 </ul>
-            </li>
-        </ul>
+            </div>
+        </div>
     </nav>
 </header>
 </body>
