@@ -7,7 +7,7 @@ require_once 'header.html';
 <script src="js/Retour_haut.js"></script>
 
 <!-- Bannière avec formulaire de don -->
-<section class="banniere position-relative">
+<section class="banniere banniere-don position-relative">
     <img src="images/Don/Banniere.png" alt="Bannière DON" class="img-fluid w-100 banner-img">
 
     <!-- Conteneur pour le formulaire et le texte -->
@@ -96,9 +96,9 @@ require_once 'header.html';
     <!-- À quoi sert mon don -->
     <p class="ms-4 mb-2 fw-semibold">Vos dons sont attribués au projet AGORAE pour :</p>
     <ul class="ms-5">
-        <li>acheter les denrées proposées par l'épicerie,</li>
+        <li>Acheter les denrées proposées par l'épicerie,</li>
         <li>équiper les AGORAé en matériel,</li>
-        <li>financer les activités.</li>
+        <li>Financer les activités.</li>
     </ul>
     <p class="ms-4">Les dons sont équitablement répartis entre les AGORAé du réseau.</p>
 

@@ -718,11 +718,78 @@ p, li {
         margin: 10px 0;
     }
 
+
     /* Don */
-    .don-form-container, .don-text-container {
-        max-width: 90%;
-        margin: 10px auto;
+    /* On masque complètement la bannière en fond */
+    .banniere-don .banner-img {
+        display: none !important;
     }
+
+    /* Le conteneur global prend un fond uni et s'adapte à la hauteur */
+    .banniere-don {
+        background-color: #f8f9fa; /* couleur douce de fond */
+        padding: 1.5rem 0;
+        position: relative;
+        height: auto !important;
+    }
+
+    /* On masque le texte à droite */
+    .banniere-don .don-text-container {
+        display: none !important;
+    }
+
+    /* Le formulaire devient centré, plein écran (90%) et bien espacé */
+    .banniere-don .don-form-container {
+        width: 90% !important;
+        margin: 0 auto !important;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 1rem 1.2rem !important;
+    }
+
+    .banniere-don .don-form-container h2 {
+        font-size: 1.5rem !important;
+        text-align: center !important;
+        color: #4c8c8c !important;
+    }
+
+    /* On supprime les positions absolues pour tout centrer naturellement */
+    .banniere-don .container {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Espacement entre les blocs internes */
+    .banniere-don .row {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Petits ajustements visuels */
+    .don-form-container .btn-custom {
+        background-color: #4c8c8c !important;
+        color: white !important;
+        border: none !important;
+    }
+
+    .don-form-container .btn-outline-custom {
+        border-color: #4c8c8c !important;
+        color: #4c8c8c !important;
+    }
+
+    .don-form-container .btn-outline-custom.active,
+    .don-form-container .btn-outline-custom:focus,
+    .don-form-container .btn-outline-custom:hover {
+        background-color: #4c8c8c !important;
+        color: white !important;
+    }
+
 
     /* Footer */
     .footer-bottom {
