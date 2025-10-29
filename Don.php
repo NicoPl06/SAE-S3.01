@@ -94,18 +94,18 @@ require_once 'header.html';
 
 <div class="container my-5">
     <!-- À quoi sert mon don -->
-    <p class="ms-4 mb-2 fw-semibold">Vos dons sont attribués au projet AGORAE pour :</p>
-    <ul class="ms-5">
+    <p class="ms-4 mb-2 fw-semibold fs-2">Vos dons sont attribués au projet AGORAE pour :</p>
+    <ul class="ms-5 ">
         <li>Acheter les denrées proposées par l'épicerie,</li>
-        <li>équiper les AGORAé en matériel,</li>
+        <li>Équiper les AGORAé en matériel,</li>
         <li>Financer les activités.</li>
     </ul>
-    <p class="ms-4">Les dons sont équitablement répartis entre les AGORAé du réseau.</p>
+    <p class="ms-4 ">Les dons sont équitablement répartis entre les AGORAé du réseau.</p>
 
     <hr class="custom-hr">
 
     <!-- Don régulier -->
-    <h5 class="fw-bold ms-4">Le don régulier, une solution simple et efficace</h5>
+    <h5 class="fw-bold ms-4 fs-2">Le don régulier, une solution simple et efficace</h5>
     <ul class="ms-5 mt-3">
         <li><strong>Liberté :</strong> vous choisissez le montant que vous donnez chaque mois, vous pouvez à tout moment le modifier ou interrompre votre soutien.</li>
         <li><strong>Efficacité :</strong> vous nous offrez plus de visibilité sur nos ressources et nos actions dans la durée, tout en limitant les frais de gestion.</li>
@@ -115,7 +115,7 @@ require_once 'header.html';
     <hr class="custom-hr">
 
     <!-- Transparence financière -->
-    <h5 class="fw-bold ms-4">TRANSPARENCE FINANCIÈRE</h5>
+    <h5 class="fw-bold ms-4 fs-2">Transparence financière</h5>
     <p class="ms-4 mt-2">
         La FAGE met à disposition du public son rapport d'activité annuel sur son site internet.
         Les comptes de l'association sont certifiés par un commissaire aux comptes chaque année.

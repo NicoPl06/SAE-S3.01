@@ -94,7 +94,7 @@ body {
     max-height: 320px;
 }
 
-/* Don : flou */
+/* flou */
 .banniere .banner-img {
     height: 500px;
     object-fit: cover;
@@ -223,7 +223,9 @@ body {
     color: #333;
 }
 
-/* Don : boutons radio custom */
+/* ===================== */
+/* ======== DON  ======= */
+/* ===================== */
 .btn-outline-custom {
     color: #4c8c8c;
     border-color: #4c8c8c;
@@ -394,6 +396,10 @@ p, li {
     position: relative;
 }
 
+.footer-center {
+    text-align: center;
+}
+
 .footer-left {
     display: flex;
     flex-direction: column;
@@ -433,6 +439,34 @@ p, li {
 .members-logos {
     display: flex;
     gap: 10px;
+}
+
+social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+    color: #4c8c8c;
 }
 
 /* ===================== */
