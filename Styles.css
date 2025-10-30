@@ -441,7 +441,7 @@ p, li {
     gap: 10px;
 }
 
-social-icons {
+.social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -623,7 +623,7 @@ social-icons {
 /* ===================== */
 
 /* Mobile : ≤576px */
-@media (max-width: 576px) {
+@media (max-width: 750px) {
 
     /* ---------- HEADER ---------- */
 

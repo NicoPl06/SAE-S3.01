@@ -28,7 +28,7 @@
 <hr class="custom-hr">
 
 <!-- 2nd Titre -->
-<h2 class="text-dark text-uppercase text-center fw-bold">
+<h2 class="text-uppercase text-center fw-bold" style="color: #4c8c8c;">
     Actualités
 </h2>
 
