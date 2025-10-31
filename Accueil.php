@@ -5,6 +5,33 @@
 
 <link rel="stylesheet" href="Styles.css">
 <script src="js/Retour_haut.js"></script>
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/Map.js"></script>
+<!-- Ajoute un modal dans ton HTML -->
+<div id="popupModal" style="
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+    max-width:500px;
+    max-height:70%;
+    overflow-y:auto;
+    z-index:10000;
+">
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+    <button onclick="document.getElementById('popupModal').style.display='none'" style="margin-top:10px;">Fermer</button>
+</div>
+
+
+
 
 <!-- Bannière -->
 <section class="banniere">
@@ -26,6 +53,21 @@
 
 <!-- ligne séparatrice -->
 <hr class="custom-hr">
+
+
+<!-- Section Carte des fédérations -->
+<section class="federations-map my-5">
+    <h2 class="text-uppercase text-center fw-bold mb-4" style="color: #4c8c8c;">
+        Les fédérations de la FAGE
+    </h2>
+
+    <div id="map" style="height: 500px; border-radius: 15px; overflow: hidden;"></div>
+</section>
+
+
+<!-- ligne séparatrice -->
+<hr class="custom-hr">
+
 
 <!-- 2nd Titre -->
 <h2 class="text-uppercase text-center fw-bold" style="color: #4c8c8c;">
