@@ -441,7 +441,7 @@ p, li {
     gap: 10px;
 }
 
-social-icons {
+.social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -623,7 +623,7 @@ social-icons {
 /* ===================== */
 
 /* Mobile : ≤576px */
-@media (max-width: 576px) {
+@media (max-width: 750px) {
 
     /* ---------- HEADER ---------- */
 
@@ -841,3 +841,65 @@ social-icons {
         justify-content: center;
     }
 }
+
+
+#map {
+    min-height: 500px;
+}
+
+
+.federations-map #map {
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 4px solid #4c8c8c;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.short-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* nombre de lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.popup-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.popup-content img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.popup-content .text {
+    flex: 1;
+}
+
+.popup-content .short-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* limite à 2 lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.popup-content .full-desc {
+    display: none;
+    margin-top: 5px;
+}
+
+.popup-content button.read-more-btn {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+
+
+
