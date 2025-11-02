@@ -1,48 +1,56 @@
 <?php
-require_once'header.html'
-
+require_once 'header.html';
 ?>
-
 
 <link rel="stylesheet" href="Styles.css">
 <script src="js/Retour_haut.js"></script>
 
-
-
 <?php
-// 1) Déclare ici tes articles (images locales dans /images/actualites)
+// ===== Données =====
 $articles = [
-        [
-                'title' => 'Indicateur du coût de la rentrée étudiante 2025',
-                'link'  => 'https://www.fage.org/news/actualites-fage-federations/2025-09-03,DP-FAGE-ICDR-2025.htm', // mets l’URL interne de ta page article
-                'date'  => '2025-09-03',
-                'image' => '/images/Actualites/actu1.png',
-                'excerpt'=> 'Cette nouvelle rentrée se présente comme un coup de massue supplémentaire pour le public étudiant…'
-        ],
-        [
-                'title' => 'Résultats des élections CNESER 2025',
-                'link'  => 'https://www.fage.org/news/actualites-fage-federations/2025-06-06,resultats-cneser-2025.htm',
-                'date'  => '2025-06-06',
-                'image' => '/images/Actualites/actu2.png',
-                'excerpt'=> 'Pour le 5e scrutin consécutif, la FAGE confirme largement sa place de 1ère ORE de France…'
-        ],
-        [
-                'title' => 'Baromètre de la précarité étudiante',
-                'link'  => 'https://www.fage.org/news/actualites-fage-federations/2025-02-19,barometre_de_la_precarite_etudiante_fage.htm',
-                'date'  => '2025-02-19',
-                'image' => '/images/Actualites/actu3.png',
-                'excerpt'=> 'Pour le 5e scrutin consécutif, la FAGE confirme largement sa place de 1ère ORE de France…'
-        ],
-    // Ajoute autant d’articles que tu veux…
+        ['title'=>'Indicateur du coût de la rentrée étudiante 2025','link'=>'https://www.fage.org/news/actualites-fage-federations/2025-09-03,DP-FAGE-ICDR-2025.htm','date'=>'03/09/2025','image'=>'/images/Actualites/actu1.png','excerpt'=>'Cette nouvelle rentrée se présente comme un coup de massue supplémentaire pour le public étudiant…'],
+        ['title'=>'Résultats des élections CNESER 2025','link'=>'https://www.fage.org/news/actualites-fage-federations/2025-06-06,resultats-cneser-2025.htm','date'=>'06/06/2025','image'=>'/images/Actualites/actu2.png','excerpt'=>'Pour le 5e scrutin consécutif, la FAGE confirme largement sa place de 1ère ORE de France…'],
+        ['title'=>'Baromètre de la précarité étudiante','link'=>'https://www.fage.org/news/actualites-fage-federations/2025-02-19,barometre_de_la_precarite_etudiante_fage.htm','date'=>'19/02/2025','image'=>'/images/Actualites/actu3.png','excerpt'=>'Analyse des situations de précarité chez les étudiant·es…'],
+        ['title'=>"Un arrondi en caisse pour des milliers de repas",'link'=>'https://www.fage.org/news/actualites-fage-federations/2024-09-27,arrondi-en-caisse-2024.htm','date'=>'27/07/2024','image'=>'/images/Actualites/Actu4.png','excerpt'=>"Auchan et Picard soutiennent nos épiceries sociales et solidaires par une opération d'arrondi en caisse."],
+        ['title'=>"20 ans après le 21 avril, les étudiant·e·s restent mobilisé·e·s contre l'extrême droite",'link'=>'https://www.fage.org/news/actualites-fage-federations/2024-07-01,FAGE_barrage_extreme_droite.htm','date'=>'01/07/2024','image'=>'/images/Actualites/Actu5.jpeg','excerpt'=>"Il y 20 ans, l'extrême droite arrivait pour la 1ère fois au 2nd tour de la présidentielle. 20 ans après, les étudiant·e·s restent mobilisé·e·s contre l'extrême droite La FAGE..."],
+        ['title'=>"FEEL Festival - 2 juin 2024",'link'=>'https://www.fage.org/news/actualites-fage-federations/2024-05-24,feel-festival-2024.htm','date'=>'24/05/2024','image'=>'/images/Actualites/Actu6.png','excerpt'=>"Une semaine avant les élections européennes de 2024, plusieurs organisations se rassemblent au sein d'une mobilisation positive à Paris afin de sensibiliser aux enjeux de ces élections."],
 ];
 
-// 2) Affichage (Bootstrap: grille + cards)
+// ===== Recherche =====
+$q = trim((string) ($_GET['q'] ?? ''));
+$filtered = $articles;
+
+if ($q !== '') {
+    $needle = strtolower($q);
+    $filtered = array_values(array_filter($articles, function($it) use ($needle) {
+        $hay = strtolower(($it['title'] ?? '') . ' ' . ($it['excerpt'] ?? ''));
+        return strpos($hay, $needle) !== false;
+    }));
+}
 ?>
+
+<!-- Barre de recherche -->
+<form class="container my-4" method="get" role="search" aria-label="Recherche d’actualités">
+    <div class="input-group">
+        <input type="search"
+               class="form-control"
+               name="q"
+               value="<?= htmlspecialchars($q) ?>"
+               placeholder="Rechercher une actualité…"
+               aria-label="Rechercher une actualité">
+        <button class="btn btn-info search-btn" type="submit"><i class="bi bi-search"></i></button>
+    </div>
+</form>
+
 <section class="container my-5">
     <h2 class="h3 mb-4">Actualités</h2>
 
+    <?php if ($q !== ''): ?>
+        <p class="text-muted">Résultats pour « <?= htmlspecialchars($q) ?> » : <?= count($filtered) ?> trouvé(s)</p>
+    <?php endif; ?>
+
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        <?php foreach ($articles as $it): ?>
+        <?php foreach ($filtered as $it): ?>
             <article class="col">
                 <div class="card h-100 shadow-sm">
                     <?php if (!empty($it['image'])): ?>
@@ -62,7 +70,7 @@ $articles = [
 
                         <?php if (!empty($it['date'])): ?>
                             <time class="text-muted small d-block mb-2"
-                                  datetime="<?= htmlspecialchars($it['date']) ?>">
+                                  datetime="<?= htmlspecialchars($it['date']) ?>"> <!-- format ISO recommandé [web:220] -->
                                 <?= htmlspecialchars($it['date']) ?>
                             </time>
                         <?php endif; ?>
@@ -77,8 +85,4 @@ $articles = [
     </div>
 </section>
 
-
-<?php
-require_once 'footer.html';
-
-?>
+<?php require_once 'footer.html'; ?>
