@@ -136,7 +136,7 @@
 
 <!-- Bouton Actualités -->
 <div class="text-center my-4">
-    <button class="btn custom-btn fw-bold rounded-pill">
+    <button class="btn custom-btn fw-bold rounded-pill" onclick="window.location.href='Actualites.php'">
         Voir toutes les Actualités
     </button>
 </div>
