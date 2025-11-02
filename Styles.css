@@ -900,6 +900,157 @@ p, li {
     cursor: pointer;
 }
 
+/* Styles spécifiques à la page de connexion */
+.page-connexion {
+    --bleu: #1d6fbf;
+    --bleu-bordure: #2e9ff0;
+    --fond-carte: #fff;
+    --fond-champ: #f5f7fa;
+    --rayon: 20px;
+    --ombre: 0 10px 30px rgba(0,0,0,0.15);
+    --texte: #1a1a1a;
+    --gris: #6b7280;
+
+    /*fond + centrage général */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("images/Connexion/fond fage 1.png") center/cover no-repeat fixed;
+    position: relative;
+}
+
+/* Bordure bleue extérieure */
+.page-connexion::before {
+    content: "";
+    position: fixed;
+    inset: 6px;
+    border: 3px solid var(--bleu-bordure);
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* Logo */
+.page-connexion header {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+}
+.page-connexion .logo {
+    height: 60px;
+}
+
+/* Bloc central (formulaire) */
+.page-connexion main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.page-connexion .carte-connexion {
+    background: var(--fond-carte);
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+    padding: 45px 40px;
+    width: 500px;
+    max-width: 90vw;
+    text-align: center;
+}
+
+.page-connexion .carte-connexion h1 {
+    color: var(--bleu);
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.page-connexion .carte-connexion p {
+    color: var(--gris);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.page-connexion .carte-connexion a {
+    color: var(--bleu);
+    text-decoration: none;
+}
+.page-connexion .carte-connexion a:hover {
+    text-decoration: underline;
+}
+
+/* Champs */
+.page-connexion .champ {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.page-connexion .champ i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b95a1;
+}
+
+.page-connexion .champ input {
+    width: 100%;
+    padding: 13px 15px 13px 45px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    background-color: var(--fond-champ);
+    font-size: 15px;
+    transition: all 0.2s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.page-connexion .champ input:focus {
+    background-color: #fff;
+    border-color: var(--bleu);
+    box-shadow: 0 0 0 3px rgba(29,111,191,0.15);
+}
+
+/* Lien mot de passe oublié */
+.page-connexion .lien-mdp {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Bouton connexion */
+.page-connexion .bouton {
+    width: 100%;
+    background: var(--bleu);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(29,111,191,.28);
+    transition: transform .06s ease, filter .15s ease;
+}
+
+.page-connexion .bouton:hover {
+    filter: brightness(1.1);
+}
+
+.page-connexion .bouton:active {
+    transform: translateY(1px);
+}
+
+/*  Responsive */
+@media (max-width: 450px) {
+    .page-connexion .carte-connexion {
+        padding: 30px 25px;
+        width: 95%;
+    }
+}
 
 
 
