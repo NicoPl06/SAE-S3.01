@@ -43,7 +43,7 @@ if ($q !== '') {
 </form>
 
 <section class="container my-5">
-    <h2 class="h3 mb-4">Actualités</h2>
+    <h2 class="text-uppercase text-center fw-bold" style="color: #4c8c8c;">Actualités</h2>
 
     <?php if ($q !== ''): ?>
         <p class="text-muted">Résultats pour « <?= htmlspecialchars($q) ?> » : <?= count($filtered) ?> trouvé(s)</p>
