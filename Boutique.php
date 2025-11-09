@@ -3,27 +3,22 @@
 // Données de la boutique
 // --------------------------
 $heroProduct = [
-    "titre"      => "Formation Civique et Citoyenne",
-    "sous_titre" => "36e Congrès national de la FAGE",
-    "cta"        => "Commander"
+        "titre"      => "Formation Civique et Citoyenne",
+        "sous_titre" => "36e Congrès national de la FAGE",
+        "cta"        => "Commander"
 ];
 
 $produits = [
-    [
-        "section" => "Section 1",
-        "nom"     => "Tote Bag FAGE",
-        "image"   => "images/totebag.png"  // laisse comme ça même si l'image n'existe pas encore
-    ],
-    [
-        "section" => "Section 2",
-        "nom"     => "T-shirt FAGE",
-        "image"   => "images/tshirt.png"
-    ],
-    [
-        "section" => "Section 3",
-        "nom"     => "Sweat FAGE",
-        "image"   => "images/sweat.png"
-    ]
+        [
+                "section" => "Section 1",
+                "nom"     => "Tote Bag FAGE",
+                "image"   => "images/Boutique/Totebag.png"
+        ],
+        [
+                "section" => "Section 2",
+                "nom"     => "T-shirt FAGE",
+                "image"   => "images/Boutique/T-Shirt.png"
+        ]
 ];
 ?>
 <!DOCTYPE html>
@@ -38,7 +33,11 @@ $produits = [
 
 <header class="boutique-header">
     <div class="boutique-container boutique-header-inner">
-        <div class="boutique-logo">FAGE</div>
+        <div class="boutique-logo">
+            <a href="Accueil.php">
+                <img src="images/Boutique/Logo FAGE.png" alt="Logo FAGE" style="height:60px;">
+            </a>
+        </div>
         <nav class="boutique-nav">
             <a href="Accueil.php">Accueil</a>
             <a href="#">Nos idées</a>
@@ -59,7 +58,9 @@ $produits = [
 
     <!-- Produit mis en avant -->
     <section class="boutique-hero-card">
-        <div class="boutique-hero-logo">FCC</div>
+        <div class="boutique-hero-logo">
+            <img src="images/Boutique/Logo FCC.png" alt="Logo FCC">
+        </div>
         <div class="boutique-hero-content">
             <p class="boutique-hero-subtitle"><?php echo $heroProduct["sous_titre"]; ?></p>
             <h2 class="boutique-hero-title"><?php echo $heroProduct["titre"]; ?></h2>
@@ -73,14 +74,14 @@ $produits = [
 
         <div class="boutique-product-grid">
             <?php
-            for ($i = 0; $i < count($produits); $i++) {
+            foreach ($produits as $produit) {
                 echo '
                 <article class="boutique-product-card">
-                    <div class="boutique-product-section">' . $produits[$i]["section"] . '</div>
+                    <div class="boutique-product-section">' . $produit["section"] . '</div>
                     <div class="boutique-product-logo">FAGE</div>
-                    <h3 class="boutique-product-name">' . $produits[$i]["nom"] . '</h3>
+                    <h3 class="boutique-product-name">' . $produit["nom"] . '</h3>
                     <div class="boutique-product-image">
-                        <img src="' . $produits[$i]["image"] . '" alt="' . $produits[$i]["nom"] . '">
+                        <img src="' . $produit["image"] . '" alt="' . $produit["nom"] . '">
                     </div>
                     <button class="boutique-btn-secondary">Commander</button>
                 </article>
@@ -104,4 +105,3 @@ $produits = [
 
 </body>
 </html>
-
