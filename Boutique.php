@@ -20,33 +20,11 @@ $produits = [
                 "image"   => "images/Boutique/T-Shirt.png"
         ]
 ];
-?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Boutique – FAGE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Styles.css">
-</head>
-<body class="boutique-page">
 
-<header class="boutique-header">
-    <div class="boutique-container boutique-header-inner">
-        <div class="boutique-logo">
-            <a href="Accueil.php">
-                <img src="images/Boutique/Logo FAGE.png" alt="Logo FAGE" style="height:60px;">
-            </a>
-        </div>
-        <nav class="boutique-nav">
-            <a href="Accueil.php">Accueil</a>
-            <a href="#">Nos idées</a>
-            <a href="#">Événements</a>
-            <a href="#">Formations</a>
-            <a href="Actualites.php">Actualités</a>
-        </nav>
-    </div>
-</header>
+require_once "header.html";
+?>
+    <link rel="stylesheet" href="Styles.css">
+    <script src="js/Retour_haut.js"></script>
 
 <main class="boutique-container">
 
@@ -93,15 +71,6 @@ $produits = [
 
 </main>
 
-<footer class="footer">
-    <div class="footer-bottom">
-        <div class="footer-left"></div>
-        <div class="footer-center">
-            <p>© 2025 FAGE – Maquette Boutique</p>
-        </div>
-        <div class="footer-right"></div>
-    </div>
-</footer>
-
-</body>
-</html>
+<?php
+require_once 'footer.html';
+?>

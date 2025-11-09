@@ -157,9 +157,9 @@
             <!-- Texte et bouton -->
             <div class="col-md-5 col-10 text-center">
                 <h3 class="fw-semibold mb-3">36e Congrès national de la FAGE</h3>
-                <button class="btn btn-lg rounded-pill fw-bold shop-btn mb-3">
+                <a class="btn btn-lg rounded-pill fw-bold shop-btn mb-3" onclick="window.location.href='Boutique.php'">
                     COMMANDER
-                </button>
+                </a>
                 <p class="shop-dates mb-0">
                     <strong>Date de début :</strong> 25/09/2025 <br>
                     <strong>Date de fin :</strong> 28/09/2025
