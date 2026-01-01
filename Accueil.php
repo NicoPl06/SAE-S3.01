@@ -74,57 +74,57 @@
     Actualités
 </h2>
 
+<?php
+// 1. Connexion et récupération des 3 actus aléatoires
+try {
+    $db_path = __DIR__ . '/back/data.sqlite';
+    $pdo = new PDO("sqlite:$db_path");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+    // Sélectionne 3 articles au hasard
+    $stmt = $pdo->query("SELECT * FROM articles ORDER BY RANDOM() LIMIT 3");
+    $carousel_articles = $stmt->fetchAll();
+} catch (PDOException $e) {
+    $carousel_articles = []; // Évite les erreurs si la base est inaccessible
+}
+?>
+
 <div class="carousel-container mx-auto my-5" style="width: 65%;">
     <div id="carousel-Actualités" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
         <div class="carousel-inner">
 
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="d-flex carousel-slide">
-                    <div class="carousel-image">
-                        <img src="images/Accueil/Actu1.png" alt="Slide 1">
-                    </div>
-                    <div class="carousel-text p-4">
-                        <h3 class="fw-bold">Coût de la rentrée étudiante</h3>
-                        <p class="fs-5">
-                            Cette nouvelle rentrée se présente comme un coup de massue supplémentaire pour le public étudiant.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <?php if (!empty($carousel_articles)): ?>
+                <?php foreach ($carousel_articles as $index => $actu): ?>
 
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="d-flex carousel-slide">
-                    <div class="carousel-image">
-                        <img src="images/Accueil/Actu2.png" alt="Slide 2">
+                    <div class="carousel-item <?= ($index === 0) ? 'active' : '' ?>">
+                        <div class="d-flex carousel-slide">
+                            <div class="carousel-image">
+                                <img src="<?= htmlspecialchars($actu['image'] ?? '') ?>" alt="Slide <?= $index + 1 ?>">
+                            </div>
+                            <div class="carousel-text p-4">
+                                <h3 class="fw-bold"><?= htmlspecialchars($actu['title'] ?? 'Sans titre') ?></h3>
+                                <p class="fs-5">
+                                    <?= htmlspecialchars($actu['excerpt'] ?? '') ?>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-text p-4">
-                        <h3 class="fw-bold">Engagement des jeunes</h3>
-                        <p class="fs-5">
-                            Près de 3000 jeunes se sont exprimés sur leur rapport à la démocratie et à l’engagement en France !
-                        </p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-                <div class="d-flex carousel-slide">
-                    <div class="carousel-image">
-                        <img src="images/Accueil/Actu3.png" alt="Slide 3">
-                    </div>
-                    <div class="carousel-text p-4">
-                        <h3 class="fw-bold">Baromètre de la précarité étudiante</h3>
-                        <p class="fs-5">
-                            Enquête réalisée auprès des bénéficiaires des AGORAé, épiceries sociales et solidaires étudiantes.
-                        </p>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="carousel-item active">
+                    <div class="d-flex carousel-slide">
+                        <div class="carousel-text p-4">
+                            <h3 class="fw-bold">Aucune actualité</h3>
+                            <p class="fs-5">La base de données est vide ou inaccessible.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
 
         </div>
-        <!-- Flèches en bas à droite -->
+
         <button class="carousel-control-prev custom-arrow" type="button" data-bs-target="#carousel-Actualités" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
