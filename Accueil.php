@@ -1,7 +1,23 @@
 <?php
-    require_once'header.html'
+// 1. TOUJOURS commencer par la session tout en haut, avant n'importe quel espace ou HTML
+session_start();
 
+// 2. Vérification de sécurité
+if (!isset($_SESSION['user_id'])) {
+    header('Location: Connexion.php');
+    exit();
+}
+
+$nom_utilisateur = $_SESSION['user_nom'] ?? 'Étudiant';
+
+// 3. SEULEMENT ENSUITE on appelle le header et le reste du HTML
+require_once 'header.html';
 ?>
+
+<link rel="stylesheet" href="Styles.css">
+<h1 class="text-uppercase text-start fw-bolder ms-5 my-5 custom-title">
+    Bienvenue sur la FAGE, <?php echo htmlspecialchars($nom_utilisateur); ?> !
+</h1>
 
 <link rel="stylesheet" href="Styles.css">
 <script src="js/Retour_haut.js"></script>
