@@ -1177,7 +1177,8 @@ p, li {
 .boutique-btn-secondary {
     background: #003366;
     color: #ffffff;
-    width: 100%;
+    width: calc(100% - 32px);
+    margin: 0 16px 16px;
 }
 
 /* Liste des produits */
@@ -1204,17 +1205,7 @@ p, li {
     display: flex;
     flex-direction: column;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-}
-
-.boutique-product-section {
-    background: #4c8c8c;
-    color: #ffffff;
-    font-size: 12px;
-    padding: 6px 14px;
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px;
-    align-self: center;
-    margin-top: -10px;
+    align-items: center; /* Centrer les éléments */
 }
 
 .boutique-product-logo {
@@ -1228,6 +1219,7 @@ p, li {
     padding: 0 16px;
     font-size: 16px;
     margin-bottom: 12px;
+    text-align: center; /* Centrer le texte */
 }
 
 .boutique-product-image {
@@ -1237,6 +1229,7 @@ p, li {
     justify-content: center;
     align-items: center;
     min-height: 140px;
+    width: 100%;
 }
 
 .boutique-product-image img {
@@ -1246,7 +1239,8 @@ p, li {
 }
 
 .boutique-product-card .boutique-btn-secondary {
-    margin: 0 16px 16px;
+    margin: 0 auto 16px; /* Centrer le bouton */
+    display: block;
 }
 
 /* Responsive boutique */
@@ -1267,6 +1261,7 @@ p, li {
         margin-right: 16px;
     }
 }
+
 
 /* ===================== */
 /* === POP-UP DE DON === */

@@ -10,12 +10,10 @@ $heroProduct = [
 
 $produits = [
         [
-                "section" => "Section 1",
                 "nom"     => "Tote Bag FAGE",
                 "image"   => "images/Boutique/Totebag.png"
         ],
         [
-                "section" => "Section 2",
                 "nom"     => "T-shirt FAGE",
                 "image"   => "images/Boutique/T-Shirt.png"
         ]
@@ -23,11 +21,10 @@ $produits = [
 
 require_once "header.html";
 ?>
-    <link rel="stylesheet" href="Styles.css">
-    <script src="js/Retour_haut.js"></script>
+<link rel="stylesheet" href="Styles.css">
+<script src="js/Retour_haut.js"></script>
 
 <main class="boutique-container">
-
     <!-- Intro boutique -->
     <section class="boutique-page-intro">
         <h1>La boutique de la FAGE</h1>
@@ -55,7 +52,6 @@ require_once "header.html";
             foreach ($produits as $produit) {
                 echo '
                 <article class="boutique-product-card">
-                    <div class="boutique-product-section">' . $produit["section"] . '</div>
                     <div class="boutique-product-logo">FAGE</div>
                     <h3 class="boutique-product-name">' . $produit["nom"] . '</h3>
                     <div class="boutique-product-image">
@@ -68,7 +64,6 @@ require_once "header.html";
             ?>
         </div>
     </section>
-
 </main>
 
 <?php
