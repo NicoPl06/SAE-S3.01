@@ -185,6 +185,17 @@ try {
     </div>
 </section>
 
+</section>
+
+<section class="logout-section py-5 bg-light border-top">
+    <div class="container text-center">
+        <p class="text-muted mb-3">Vous êtes connecté en tant que <strong><?php echo htmlspecialchars($nom_utilisateur); ?></strong></p>
+        <a href="Deconnexion.php" class="btn btn-danger btn-lg rounded-pill fw-bold shadow-sm">
+            <i class="fas fa-sign-out-alt me-2"></i> SE DÉCONNECTER
+        </a>
+    </div>
+</section>
+
 <?php
 require_once 'footer.html';
 

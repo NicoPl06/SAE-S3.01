@@ -1358,5 +1358,19 @@ p, li {
     }
 }
 
+.logout-section {
+    margin-top: 50px;
+    padding: 40px 0;
+}
 
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    transition: all 0.3s ease;
+}
 
+.btn-danger:hover {
+    background-color: #b02a37;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
+}
