@@ -22,18 +22,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute(['id' => $identifier]);
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            // 4. Vérification du mot de passe haché
+            // ... (début du code identique)
+
+            // 4. Vérification du mot de passe
             if ($user && password_verify($password, $user['password'])) {
-                // Succès : on stocke les infos en session
+                // Succès : on stocke les infos
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_nom'] = $user['nom'];
 
-                // Redirection vers l'accueil
+                // --- MODIFICATION ICI ---
+                // Si l'utilisateur est un ADMIN, on lui donne le sésame pour le Back-Office
+                // et on le redirige directement vers le tableau de bord.
+                if (isset($user['role']) && $user['role'] === 'admin') {
+                    $_SESSION['admin_user'] = $user['nom']; // La variable magique pour auth.php
+                    header('Location: admin/index.php');    // Direction le Back-Office !
+                    exit();
+                }
+                // ------------------------
+
+                // Pour les autres (visiteurs, bénévoles lambda), direction l'accueil normal
                 header('Location: Accueil.php');
                 exit();
             } else {
                 $message_erreur = "Identifiant ou mot de passe incorrect.";
             }
+
+            // ... (fin du code identique)
         } else {
             $message_erreur = "Veuillez remplir tous les champs.";
         }
