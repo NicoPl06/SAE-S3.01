@@ -57,9 +57,9 @@ Compte administrateur de test : [À compléter : identifiants de démonstration,
 Projet réalisé à 4 :
 
 - Nicolas Plaisance : page d'accueil, page de dons, contribution au back-office
-- Apollinaire D. : boutique
-- Yacoub C. : page d'actualités, back-office
-- Ismail F. : inscription, connexion, dons
+- Apollinaire Dumez : boutique
+- Yacoub Cherief : page d'actualités, back-office
+- Ismail Fourra : inscription, connexion, dons
 
 ## Améliorations envisagées
 
